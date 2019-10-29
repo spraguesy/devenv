@@ -8,10 +8,11 @@ PYTHON_VERSION=3.8.0
 SHELL=/bin/bash
 TMUX_VERSION=2.9
 
-#PostgreSQL
+# Cassandra
 USERNAME=asprague
 
-
+#PostgreSQL
+USERNAME=asprague
 
 #Spark
 SPARK_VERSION=2.4.3
@@ -19,9 +20,7 @@ SPARK_VERSION=2.4.3
 generate-passwords:
 	@echo Generating passwords...
 	mkdir -p ./passwords
-	PASS=$(shell date +%s | sha256sum | base64 | head -c 32)
-	@echo $(PASS) > ./passwords/postgresql.txt
-	echo pwd
+	echo $(shell date +%s | sha256sum | base64 | head -c 32) > ./passwords/postgresql.txt
 
 install-tmux:
 	@echo Installing tmux....

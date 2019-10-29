@@ -1,0 +1,63 @@
+# Command line
+alias c='clear'
+
+# VIM helpers
+alias edita='vim ~/.aliases'
+alias savea='source ~/.aliases'
+
+# Power
+alias sdn='shutdown now'
+alias rstn='shutdown -r now'
+
+# CLI
+alias cqlshd='cqlsh 10.11.17.10 -u cassandra -p cassandra'
+alias pgclid='pgcli -p 9876 -h localhost asprague'
+alias pgcliiland='pgcli -h localhost -p 9876 -d iland_inventory -u iland_inventory'
+alias psql='/usr/local/pgsql/bin/psql'
+alias psqld='/usr/local/pgsql/bin/psql -p 9876 -h localhost asprague'
+
+# Git
+alias ga='git add'
+alias gacr='ga . && gcmu && gr2' 
+alias gb='git branch'
+alias gba='git branch -a'
+alias gch='git checkout'
+alias gchb='git checkout -b'
+alias gcm='git commit -m'
+alias gcmu='git commit -m "Update"'
+alias gd='git diff'
+alias gl='git log'
+alias gpo='git push origin'
+alias gpuo='git push -u origin'
+alias gr2='git rebase -i HEAD~2'
+alias gs='git status'
+
+# Makefiles
+alias mc='make clean'
+alias mct='msc && msp && mc && mt'
+alias ml='make lint'
+alias mstc='make start-cassandra'
+alias mspc='make stop-cassandra'
+alias mstp='make start-postgres'
+alias mspp='make stop-postgres'
+alias mstte='make start-test-env'
+alias mt='make test'
+
+# Networking
+alias ivpn='nmcli con up id iland\ dev'
+alias ivpnd='nmcli con down id iland\ dev'
+
+# Server/Processes
+alias jpn='jupyter notebook'
+alias pgstart='/home/asprague/.postgresql-9.5.16/local/bin/pg_ctl start -D /home/asprague/.postgresql-9.5.16/local/data -l /home/asprague/.postgresql-9.5.16/local/logfile'
+alias pgstop='/home/asprague/.postgresql-9.5.16/local/bin/pg_ctl stop -D /home/asprague/.postgresql-9.5.16/local/data'
+alias pscass='ps auxw|grep cass'
+alias pspsql='ps auxw|grep postgres'
+alias pskaf='ps auxw|grep kafka'
+alias psspark='ps auxw|grep spark'
+alias spstart='~/.spark-2.4.3-bin-hadoop2.7/sbin/start-all.sh'
+alias spstop='~/.spark-2.4.3-bin-hadoop2.7/sbin/stop-all.sh'
+alias spstart2.3='~/.spark-2.3.3-bin-hadoop2.7/sbin/start-all.sh'
+alias spstop2.3='~/.spark-2.3.3-bin-hadoop2.7/sbin/stop-all.sh'
+
+alias v='vim /home/asprague/.wildfly-10.1/standalone/configuration/standalone.xml'
